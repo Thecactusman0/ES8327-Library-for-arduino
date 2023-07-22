@@ -18,9 +18,6 @@ writeRegister(0x01,0XFF); //Turn on all clocks
 writeRegister(0x4F,0X01);//Unmute ADC
 writeRegister(0x16,0x00);//Power on analog
 writeRegister(0x17,0xC0);//Power on adc
-
-writeRegister(0x23,0x20);//Setup input mic on mic in 2
-
 writeRegister(0x25,0XAA);//Enable output
 writeRegister(0x27,0x77);//Enable output
 writeRegister(0x2C,191);//Unmute ADC
