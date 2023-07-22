@@ -1,5 +1,5 @@
 # ES8327-Library-for-arduino
- An Arduino library for the Everrest semiconductor ES8327 I2S codec chip
+ An Arduino library for the Everest semiconductor ES8327 I2S codec chip
 
  Currently only has support for the following:
 	
