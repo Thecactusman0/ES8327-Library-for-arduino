@@ -72,8 +72,7 @@ void ES8327::setWordLength(int length) //works for 16, 18, 20, 24 and 32 bit
  }
 
 writeRegister(0x13,i);
-Serial.print("Value read:");
-Serial.println(readRegister(0X13),HEX);
+
 }
 
 
@@ -88,8 +87,8 @@ int in_min = -95.5;
 int in_max = 32;
 
 i = (vol - in_min) * 255 / (in_max - in_min);
-if(i<0){i=0};
-if(i>255){i=255};
+if(i<0){i=0;};
+if(i>255){i=255;};
 writeRegister(0x50,i);
 
 }
@@ -104,8 +103,8 @@ int in_min = -95.5;
 int in_max = 32;
 
 i = (vol - in_min) * 255 / (in_max - in_min);
-if(i<0){i=0};
-if(i>255){i=255}; 
+if(i<0){i=0;};
+if(i>255){i=255;}; 
 writeRegister(0x2C,i);
 
 }

@@ -1,0 +1,14 @@
+#######################################
+# Syntax Coloring Map For ES8327
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin             KEYWORD2
+setVolumeOut      KEYWORD2
+setVolumeIn       KEYWORD2
+setWordLength     KEYWORD2
+
+
+
