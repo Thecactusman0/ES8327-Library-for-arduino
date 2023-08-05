@@ -6,6 +6,8 @@
 
 #ifndef ES8327_h
 #define ES8327_h
+#define Headphone 1
+#define Internal 2
 
 
 class ES8327
@@ -16,6 +18,10 @@ class ES8327
     void setVolumeOut(float vol);// Vol (dB) must be in the range of -95.5 to 32 in increments of 0.5
     void setVolumeIn(float vol);// Vol (dB) must be in the range of -95.5 to 32 in increments of 0.5
     void setWordLength(int length); // set i2s word length
+    void micAutoLevelControlOn(); //Turn on microphone automatic level control
+    void micAutoLevelControlOff(); //Turn off microphone automatic level control
+    void autoLevelControlTargetLevel(float target); //Target level for auto level control in dB, acceptable values are -30,-27,-24,-21,-19,-17,-15,-13.5,-12,-10.5,-9,-7.5,-6,-4.5,-3,-1.5 Default -30 if function not called
+    void micSelect(int mic,int gain); //Accepts "Headphone" and "Internal" for mic and 0,3,6,9,12,15,18,21,24,27,30
   private: //for stuff that needs to be accessed only inside the library
     void writeRegister(int register_address, int val);
     int readRegister(int register_address);
