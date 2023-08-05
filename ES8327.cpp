@@ -182,7 +182,7 @@ i = (vol - in_min) * 255 / (in_max - in_min);
 if(i<0){i=0;};
 if(i>255){i=255;}; 
 writeRegister(0x2C,i);
-
+writeRegister(0x2D,i);
 }
 
 
