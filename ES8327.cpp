@@ -11,8 +11,8 @@ ES8327::ES8327(TwoWire& wire, int HPINT, int ADR) : _wire(wire), _HPINT(HPINT), 
 bool ES8327::begin()
 {
 pinMode(_HPINT,INPUT);
-//writeRegister(0x01,0x3C);
-writeRegister(0x01,0XFF); //Turn on all clocks
+writeRegister(0x00,0x17);
+writeRegister(0x01,0X7F); //Turn on all clocks
 writeRegister(0xF9,0x02);
 writeRegister(0x02,0x00);
 writeRegister(0x03,0x05);
@@ -48,7 +48,7 @@ writeRegister(0x50,0xBF);
 writeRegister(0x56,0x88);
 writeRegister(0x57,0x10);
 writeRegister(0x58,0x08);
-writeRegister(0x59,0x45);
+writeRegister(0x59,0x47);
 writeRegister(0x5A,0x90);
 writeRegister(0x5B,0x00);
 writeRegister(0x15,0x00);
@@ -60,6 +60,7 @@ writeRegister(0x24,0X01);
 writeRegister(0x16,0x00);//Power on analog
 //writeRegister(0x27,0x00);
 writeRegister(0x27,0x77);
+
 
 
   for (int deviceAddress = 1; deviceAddress < 127; deviceAddress++) {
